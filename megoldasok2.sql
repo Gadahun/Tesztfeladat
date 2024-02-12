@@ -30,5 +30,27 @@ WHERE megallok.nev LIKE '%sétány'
 ORDER BY megallok.nev
 
 -- 16. feladat:
+SELECT
+  halozat.sorszam,
+  megallok.nev AS megallo,
+  jaratok.jaratSzam
+FROM halozat
+  INNER JOIN jaratok
+    ON halozat.jarat = jaratok.id
+  INNER JOIN megallok
+    ON halozat.megallo = megallok.id
+WHERE jaratok.jaratSzam = 'CITY'
+AND halozat.irany ='A'
+ORDER BY halozat,sorszam
 
+-- 17. feladat:
 
+  megallok.nev AS megallo,
+  COUNT(halozat.jarat) AS jaratokSzama
+FROM halozat
+  INNER JOIN jaratok
+    ON halozat.jarat = jaratok.id
+  INNER JOIN megallok
+    ON halozat.megallo = megallok.id
+GROUP BY megallok.nev
+HAVING COUNT(halozat.jarat) >= 3
