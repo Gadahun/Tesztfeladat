@@ -12,7 +12,9 @@ INSERT INTO megallok (id, nev)
 
 
 -- 13. feladat:
-
+UPDATE jaratok
+SET elsoAjtos = 0
+WHERE id = 20
 
 -- 14. feladat:
 
