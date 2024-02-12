@@ -17,7 +17,10 @@ SET elsoAjtos = 0
 WHERE id = 20
 
 -- 14. feladat:
-
+SELECT
+  jaratok.jaratSzam
+FROM jaratok
+WHERE jaratok.elsoAjtos = 1
 
 -- 15. feladat:
 
