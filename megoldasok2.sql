@@ -23,7 +23,11 @@ FROM jaratok
 WHERE jaratok.elsoAjtos = 1
 
 -- 15. feladat:
-
+SELECT
+  megallok.nev
+FROM megallok
+WHERE megallok.nev LIKE '%sétány'
+ORDER BY megallok.nev
 
 -- 16. feladat:
 
